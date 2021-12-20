@@ -19,9 +19,10 @@ var getRepoName = function() {
 };
 
 
-var getRepoIssues = function(repoName) {
-    console.log(repoName);
-    var apiUrl = "https://api.github.com/repos/" + repoName + "/issues?direction=asc";
+var getRepoIssues = function(repo) {
+    console.log(repo);
+    //format the github api url
+    var apiUrl = "https://api.github.com/repos/" + repo + "/issues?direction=asc";
 
     //make a get request to url
     fetch(apiUrl).then(function(response) {
